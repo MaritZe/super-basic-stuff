@@ -1,0 +1,45 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+
+using namespace std;
+
+int main(){
+	int v[100][100],f=0, c=0;
+	int v2[100][100];
+		
+	cout<<"Cuantas columnas quiere?  ";cin>>c;
+	cout<<"Cuantas filas quiere?  ";cin>>f;
+	
+	srand(time(NULL));
+	
+	//Rellenamos el primer vector
+	 
+	for( int i = 0;i<f; i++ ){
+		for( int o = 0;o<c; o++){
+		
+		v[i][o]= 1+rand()%(100);	
+		}
+	}
+	//Pasamos los datos al segundo vector
+	for( int i = 0;i<f; i++ ){
+		for( int o = 0;o<c; o++){
+		
+		v2[i][o]= v[i][o];	
+		}
+	}
+	
+	
+	//Imprimimos los datos en pantalla
+	for( int i = 0;i<f; i++ ){
+		for( int o = 0;o<c; o++){
+		cout<<v2[i][o]<<"     ";	
+		}
+		cout<<"\n";
+	}
+	
+	
+	
+	system("pause");
+	return 0;
+}
